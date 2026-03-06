@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Follies - Wingra School</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 700px; margin: 40px auto; padding: 0 20px; background: #fdf6e3; color: #333; }
+  h1 { text-align: center; color: #5a2d0c; }
+  h2 { text-align: center; color: #888; font-weight: normal; font-size: 1.1em; margin-top: -10px; }
+  ol { padding-left: 20px; }
+  li { margin: 14px 0; padding: 10px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .title { font-weight: bold; font-size: 1.1em; }
+  .performer { color: #666; }
+  .description { font-style: italic; color: #888; font-size: 0.95em; }
+  a { color: #b5651d; }
+  a:hover { color: #5a2d0c; }
+  .material { margin-top: 4px; }
+  #gate { text-align: center; margin-top: 120px; }
+  #gate input { font-size: 1.1em; padding: 8px 14px; border: 2px solid #b5651d; border-radius: 6px; font-family: Georgia, serif; }
+  #gate button { font-size: 1.1em; padding: 8px 18px; background: #b5651d; color: #fff; border: none; border-radius: 6px; cursor: pointer; margin-left: 6px; font-family: Georgia, serif; }
+  #gate button:hover { background: #5a2d0c; }
+  #gate p { color: #c33; margin-top: 8px; }
+  #content { display: none; }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <h1>Community Follies</h1>
+  <h2>Wingra School</h2>
+  <br>
+  <input type="password" id="pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')unlock()">
+  <button onclick="unlock()">Go</button>
+  <p id="err"></p>
+</div>
+
+<div id="content">
+<h1>Community Follies</h1>
+<h2>Wingra School &mdash; Friday, March 6, 2026 at 2pm</h2>
+
+<ol>
+  <li>
+    <span class="title">Fly Away</span> <span class="description">by Lenny Kravitz</span><br>
+    <span class="performer">Wingra School Rock Band</span>
+  </li>
+  <li>
+    <span class="title">Ropes Magic Trick</span><br>
+    <span class="performer">Jasper</span>
+  </li>
+  <li>
+    <span class="title">Ode to Joy</span> <span class="description">Piano performance</span><br>
+    <span class="performer">Atticus</span>
+  </li>
+  <li>
+    <span class="title">Landslide</span> <span class="description">Singing</span><br>
+    <span class="performer">Anthony</span>
+    <div class="material"><a href="Landslide.mp3">Backing Track (MP3)</a></div>
+  </li>
+  <li>
+    <span class="title">Hold On</span> <span class="description">Sing and teach a song to all</span><br>
+    <span class="performer">Kevin, Joanne, and Twyla</span>
+  </li>
+  <li>
+    <span class="title">Eye of the Tiger</span> <span class="description">Piano</span><br>
+    <span class="performer">Benjamin and Patricia</span>
+  </li>
+  <li>
+    <span class="title">Is it Jojo, Gemma or Rachel?</span> <span class="description">A guessing game</span><br>
+    <span class="performer">Rachel</span>
+    <div class="material"><a href="https://docs.google.com/presentation/d/1WdQZnQkdCdF8x5O-mB5-WFFUXG70wNoXW2TCTKYGjl8/edit?usp=sharing" target="_blank">Slides (Google Slides)</a></div>
+  </li>
+  <li>
+    <span class="title">Holding Out for a Hero</span> <span class="description">Reenacting a scene from Shrek 2</span><br>
+    <span class="performer">Lindsay and company</span>
+    <div class="material"><a href="https://www.youtube.com/watch?v=SsyD0q96zZ4&t=204s" target="_blank">Reference Video (YouTube)</a></div>
+  </li>
+  <li>
+    <span class="title">Spelling Sucks</span> <span class="description">Songs about spelling conundrums</span><br>
+    <span class="performer">Rowan and Andy</span>
+  </li>
+  <li>
+    <span class="title">Community Sing-a-long</span><br>
+    <span class="performer">Christine</span>
+    <div class="material"><em>PowerPoint &mdash; not yet downloaded</em></div>
+  </li>
+  <li>
+    <span class="title">MadFiddle Song</span> <span class="description">Fiddle</span><br>
+    <span class="performer">Frida and Anna</span>
+  </li>
+</ol>
+</div>
+
+<script>
+function unlock() {
+  if (document.getElementById('pw').value === 'torsie') {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } else {
+    document.getElementById('err').textContent = 'Nope, try again!';
+  }
+}
+</script>
+</body>
+</html>
